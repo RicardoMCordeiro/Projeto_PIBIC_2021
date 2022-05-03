@@ -79,7 +79,7 @@ export default function Demonstrativos() {
     const target = e.target;
     const name = target.name;
     const value = name === "periodo" ? optionsMap(target.value) : target.value;
-    
+     
     setFormState((state) => ({ ...state, [name]: value }));
   };
 
@@ -111,7 +111,7 @@ export default function Demonstrativos() {
     }
     axios
       .get(
-        `/api/cia_aberta/doc/${formState.tipo}/${formState.ano}/${formState.dem}/${formState.info}/${cia.cdCvm}/${formState.periodo}`
+        `/api/cia_aberta/doc/${formState.tipo}/${formState.ano}/${formState.dem}/${info}/${cia.cdCvm}/${formState.periodo}`
       )
       .then((response) =>  response.data)
       .then(setAccounts)
@@ -171,11 +171,10 @@ export default function Demonstrativos() {
           </Columns>
           <Columns className="mt-3">
             <Columns.Column narrow>
-              <Dropdown
+              <Dropdown 
                 name="tipo"
                 label="Tipo"
-                options={["ITR", "DFP"]}
-                value={formState.tipo}
+                options={["ITR", "DRE"]}
                 onChange={handleEvent}
               />
             </Columns.Column>
@@ -221,7 +220,7 @@ export default function Demonstrativos() {
               </tr>
             </thead>
             <tbody>
-              {accounts && accounts.length !== 0 &&
+              {accounts && accounts.length != 0 &&
 
                 accounts[0].contas.map((row) => (
                   <tr key={`${row.cdConta}${row.vlConta}`}>
