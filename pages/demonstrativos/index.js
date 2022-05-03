@@ -168,7 +168,7 @@ export default function Demonstrativos() {
               <Dropdown 
                 name="tipo"
                 label="Tipo"
-                options={["ITR", "DRE"]}
+                options={["ITR", "DFP"]}
                 onChange={handleEvent}
               />
             </Columns.Column>
