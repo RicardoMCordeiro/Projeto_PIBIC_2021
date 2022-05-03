@@ -62,7 +62,7 @@ export default function Demonstrativos() {
     tipo: "ITR",
     ano: "2016",
     periodo: "1",
-    info: "con",
+    info: "Consolidada",
     dem: "DRE",
   }); //INICIALIZACAO DO ESTADO ATUAL DOS DADOS (PESQUISA)
 
@@ -102,13 +102,20 @@ export default function Demonstrativos() {
     );
 
   //REALIZA A CONSULTA NA API DA COMPANHIA ESCOLHIDA
-  const fetchResultsAccounts = () =>
+  const fetchResultsAccounts = () => {
+    const info = ""
+    if (formState.info === "Consolidada") {
+      info = "con"
+    } else if (formState.info === "Individual") {
+      info = "ind"
+    }
     axios
       .get(
         `/api/cia_aberta/doc/${formState.tipo}/${formState.ano}/${formState.dem}/${formState.info}/${cia.cdCvm}/${formState.periodo}`
       )
       .then((response) =>  response.data)
       .then(setAccounts)
+  }
 
   return (
     <>
@@ -192,7 +199,7 @@ export default function Demonstrativos() {
               <Dropdown
                 name="info"
                 label="Informação"
-                options={["con", "ind"]}
+                options={["Consolidada", "Individual"]}
                 onChange={handleEvent}
               />
             </Columns.Column>
