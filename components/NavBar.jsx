@@ -10,18 +10,21 @@ export default function NavBar() {
 
   return (
     <Navbar active={active}>
+
       <Navbar.Brand>
         <Navbar.Item href="/">
           <Image src={Brand} alt="Plataforma financeira" />
         </Navbar.Item>
         <Navbar.Burger onClick={toggle}/>
       </Navbar.Brand>
+
       <Navbar.Menu>
         <Navbar.Container>
           <Navbar.Item href="/companhias">Companhias</Navbar.Item>
           <Navbar.Item href="/demonstrativos">Demonstrativos</Navbar.Item>
         </Navbar.Container>
       </Navbar.Menu>
+      
     </Navbar>
   );
 }

@@ -1,6 +1,5 @@
 import { Form } from "react-bulma-components";
 
-
 export default function Dropdown({ name, label, value, options, onChange }) {
   return (
     <Form.Control>
