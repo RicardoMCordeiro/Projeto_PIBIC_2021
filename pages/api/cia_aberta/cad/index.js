@@ -4,6 +4,7 @@ import { hasArgs } from "../../../../utils/utils";
 export default async function handler(req, res) {
   if (hasArgs(req.query)) {
     const { db } = await connectToDatabase();
+    
     const {
       denomSocial,
       uf,
@@ -20,6 +21,7 @@ export default async function handler(req, res) {
       uf: 1,
       sit: 1,
     };
+    
     const filtering = {
       ...(denomSocial && {
         denomSocial: { $regex: denomSocial, $options: "i" },

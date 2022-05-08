@@ -6,7 +6,6 @@ import { formatPhone } from "../../utils/utils";
 
 export default function Companhia({ data }) {
   const [cia] = data;
-  console.log(cia);
 
   const renderRow = (row, value) =>
     value ? (
@@ -28,9 +27,11 @@ export default function Companhia({ data }) {
         </Head>
         <Table size="fullwidth" striped>
           <thead>
-            <th className="has-background-primary has-text-white" colSpan={2}>
-              Informações cadastrais
-            </th>
+            <tr>
+              <th className="has-background-primary has-text-white" colSpan={2}>
+                Informações cadastrais
+              </th>
+            </tr>
           </thead>
           <tbody>
             {renderRow("CVM", cia.cdCvm)}
@@ -42,9 +43,11 @@ export default function Companhia({ data }) {
             {renderRow("Motivo cancelamento", cia.motivoCancel)}
           </tbody>
           <thead>
-            <th className="has-background-primary has-text-white" colSpan={2}>
-              Informações de endereço
-            </th>
+            <tr>
+              <th className="has-background-primary has-text-white" colSpan={2}>
+                Informações de endereço
+              </th>
+            </tr>
           </thead>
           <tbody>
             {renderRow("País", cia.pais)}
@@ -55,9 +58,11 @@ export default function Companhia({ data }) {
             {renderRow("Logradouro", cia.logradouro)}
           </tbody>
           <thead>
-            <th className="has-background-primary has-text-white" colSpan={2}>
-              Informações de contato
-            </th>
+            <tr>
+              <th className="has-background-primary has-text-white" colSpan={2}>
+                Informações de contato
+              </th>
+            </tr>
           </thead>
           <tbody>
             {renderRow("Email", cia.email)}
@@ -65,9 +70,11 @@ export default function Companhia({ data }) {
             {renderRow("Fax", formatPhone(cia.dddFax, cia.fax))}
           </tbody>
           <thead>
-            <th className="has-background-primary has-text-white" colSpan={2}>
-              Informações do responsável
-            </th>
+            <tr>
+              <th className="has-background-primary has-text-white" colSpan={2}>
+                Informações do responsável
+              </th>
+            </tr>
           </thead>
           <tbody>
             {renderRow("Nome", cia.resp)}
@@ -75,9 +82,11 @@ export default function Companhia({ data }) {
             {renderRow("Tipo", cia.tpResp)}
           </tbody>
           <thead>
-            <th className="has-background-primary has-text-white" colSpan={2}>
-              Informações do auditor
-            </th>
+            <tr>
+              <th className="has-background-primary has-text-white" colSpan={2}>
+                Informações do auditor
+              </th>
+            </tr>
           </thead>
           <tbody>
               {renderRow("Auditor", cia.auditor)}

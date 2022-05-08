@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     const { param } = req.query;
 
     if (param.length === 6) {
-      const periods = ["03-31", "06-30", "09-30", "12-31"];
+      const periods = ["03-31", "06-30", "09-30"];
       const filtering = {
         tipo: param[0],
         ano: param[1],
