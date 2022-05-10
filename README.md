@@ -1,14 +1,15 @@
-# Plataforma Financeira
+<h1 align="center"> Plataforma Financeira</h1>
 
 ## Descrição do Projeto
 <p align="center">Aplicação em Next.js para ler dados vindo do portal de dados abertos da CVM.</p>
 
-<h1 align="center">
+<h3 align="center">
     <a href="https://nextjs.org/">🔗 Next: O React Framework para Produção</a>
-</h1>
+</h3>
 <p align="center">🚀 O Next.js oferece a melhor experiência de desenvolvedor com todos os recursos necessários para produção: renderização híbrida estática e de servidor, suporte a TypeScript, agrupamento inteligente, pré-busca de rota e muito mais. Nenhuma configuração necessária.
 </p>
 
+## Conteúdo
 <p align="center">
  <a href="#objetivo">Objetivo</a> •
  <a href="#tecnologias">Tecnologias</a> • 
@@ -17,6 +18,7 @@
  <a href="#autor">Autor</a>
 </p>
 
+## Status do projeto
 <h4 align="center"> 
 	🚧  Projeto PIBIC 2021 - Plataforma Financeira 🚀 Em construção...  🚧
 </h4>
