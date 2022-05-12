@@ -181,7 +181,7 @@ export default function demonstrativos() {
               <Dropdown 
                 name="periodo"
                 label="Período"
-                options={["31/03", "30/06", "30/09"]}
+                options={["31/03", "30/06", "30/09", "31/12"]}
                 onChange={handleEvent}
               />
             </Columns.Column>
@@ -226,7 +226,7 @@ export default function demonstrativos() {
             </tbody>
           </Table>
         </Table.Container>
-
+        {accounts && accounts.length === 0 && <p>Sem resultados.</p>}
       </Section>
     </>
   );

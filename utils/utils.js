@@ -1,7 +1,10 @@
 export const years = () => {
+  const dataAtual = new Date();
+  const anoAtual = dataAtual.getFullYear();
+
   const list = [];
   
-  for (let i = 2016; i <= 2020; ++i) {
+  for (let i = anoAtual-5; i <= anoAtual; ++i) {
     list.push(i.toString());
   }
   return list;
@@ -12,6 +15,7 @@ export const optionsMap = (op) => {
   else if (op === "30/06") return "1";
   else if (op === "30/09") return "2";
   else if (op === "31/12") return "3";
+  else return "4";
 };
 
 export const adjustmentStatement = (demonstrative) => {
