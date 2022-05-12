@@ -4,7 +4,7 @@ export const years = () => {
 
   const list = [];
   
-  for (let i = anoAtual-5; i <= anoAtual; ++i) {
+  for (let i = anoAtual-4; i <= anoAtual; ++i) {
     list.push(i.toString());
   }
   return list;
