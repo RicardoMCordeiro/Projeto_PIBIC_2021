@@ -53,7 +53,7 @@ export default function Demonstrativos() {
   const [results, setResults] = useState(null); // Resultados da pesquisa
   const [formState, setFormState] = useState({
     tipo: "ITR",
-    ano: "2016",
+    ano: "",
     periodo: "1",
     info: "con",
     dem: "DRE",
