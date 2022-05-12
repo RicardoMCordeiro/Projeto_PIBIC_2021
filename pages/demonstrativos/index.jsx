@@ -45,7 +45,7 @@ const DemTabs = ({ onChangeTab }) => {
   );
 }
 
-export default function demonstrativos() {
+export default function Demonstrativos() {
 
   const [cia, setCia] = useState(null); // Companhias
   const [accounts, setAccounts] = useState(null);
