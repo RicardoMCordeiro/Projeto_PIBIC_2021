@@ -46,6 +46,9 @@ const DemTabs = ({ onChangeTab }) => {
 }
 
 export default function Demonstrativos() {
+  const dataAtual = new Date();
+  const anoInicial = dataAtual.getFullYear() - 5
+  console.log(anoInicial)
 
   const [cia, setCia] = useState(null); // Companhias
   const [accounts, setAccounts] = useState(null);
@@ -53,7 +56,7 @@ export default function Demonstrativos() {
   const [results, setResults] = useState(null); // Resultados da pesquisa
   const [formState, setFormState] = useState({
     tipo: "ITR",
-    ano: "",
+    ano: anoInicial,
     periodo: "1",
     info: "con",
     dem: "DRE",
@@ -181,7 +184,7 @@ export default function Demonstrativos() {
               <Dropdown 
                 name="periodo"
                 label="Período"
-                options={["31/03", "30/06", "30/09", "31/12"]}
+                options={["31/03", "30/06", "30/09"]}
                 onChange={handleEvent}
               />
             </Columns.Column>

@@ -4,7 +4,7 @@ export const years = () => {
 
   const list = [];
   
-  for (let i = anoAtual-4; i <= anoAtual; ++i) {
+  for (let i = anoAtual-5; i <= anoAtual-1; ++i) {
     list.push(i.toString());
   }
   return list;
@@ -14,8 +14,7 @@ export const optionsMap = (op) => {
   if (op === "31/03") return "0";
   else if (op === "30/06") return "1";
   else if (op === "30/09") return "2";
-  else if (op === "31/12") return "3";
-  else return "4";
+  else return "3";
 };
 
 export const adjustmentStatement = (demonstrative) => {
