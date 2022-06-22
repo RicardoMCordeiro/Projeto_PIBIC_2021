@@ -40,7 +40,7 @@ const DemTabs = ({ onChangeTab }) => {
       <Item name="DRE" />
       <Item name="BPA" />
       <Item name="BPP" />
-      <Item name="DFC MD" />
+      <Item name="DFC MI" />
     </Tabs>
   );
 }
