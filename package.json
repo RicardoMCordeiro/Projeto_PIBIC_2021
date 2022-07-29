@@ -14,14 +14,17 @@
     "@fortawesome/react-fontawesome": "^0.1.18",
     "axios": "^0.27.1",
     "bulma": "^0.9.3",
+    "json2csv": "^5.0.7",
     "mongodb": "^4.5.0",
     "next": "12.1.5",
     "react": "18.0.0",
     "react-bulma-components": "^4.1.0",
+    "react-csv": "^2.2.2",
     "react-dom": "18.0.0",
     "react-input-mask": "^2.0.4",
     "react-promise-tracker": "^2.1.0",
-    "sass": "^1.51.0"
+    "sass": "^1.51.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "eslint": "8.14.0",
