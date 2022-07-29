@@ -9,10 +9,12 @@ import {
   Table,
 } from "react-bulma-components";
 import Dropdown from "../../components/Dropdown";
+import ExportToCSV from "../../components/ExportToCSV";
 import NavBar from "../../components/NavBar";
 import { optionsMap, years, formatMoney, adjustmentStatement } from "../../utils/utils.js";
 import { usePromiseTracker, trackPromise } from "react-promise-tracker";
 import Head from "next/head";
+
 
 const DemTabs = ({ onChangeTab }) => {
   const [tab, setTab] = useState("DRE");
@@ -48,7 +50,6 @@ const DemTabs = ({ onChangeTab }) => {
 export default function Demonstrativos() {
   const dataAtual = new Date();
   const anoInicial = dataAtual.getFullYear() - 5
-  console.log(anoInicial)
 
   const [cia, setCia] = useState(null); // Companhias
   const [accounts, setAccounts] = useState(null);
@@ -134,6 +135,11 @@ export default function Demonstrativos() {
               <Button color="primary" loading={promiseInProgress}>Buscar</Button>  {/* Botão de busca */}
             </Columns.Column>
 
+            <Columns.Column>{
+              accounts && accounts.length !== 0 &&
+              <ExportToCSV {  ...accounts[0] } />}
+            </Columns.Column>
+
           </Columns>
 
           <Columns>  {/* Mostra os dados da pesquisa */}
@@ -197,12 +203,13 @@ export default function Demonstrativos() {
                 onChange={handleEvent}
               />
             </Columns.Column>
-
+            
           </Columns>
 
           <DemTabs 
               onChangeTab={(t) => setFormState((state) => ({ ...state, dem: t }))}
           />
+          
         </form>
                 
         <Table.Container>    {/* Área das informações da empresa pesquisada */}
