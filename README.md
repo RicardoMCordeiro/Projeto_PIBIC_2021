@@ -15,10 +15,10 @@
  <a href="#pré-requisitos">Pré-requisitos</a> • 
  <a href="#-dependecias">Dependências</a> • 
  <a href="#-instalacao-de-dependecias">Instalação de dependências</a> • 
- <a href="#-tecnologias">Tecnologias</a> • 
- <a href="#-contribuicao">Contribuição</a> • 
+ <a href="#-tecnologias">Tecnologias</a> 
+<!-- <a href="#-contribuicao">Contribuição</a> • 
  <a href="#-licenca">Licença</a> • 
- <a href="#-autor">Autor</a>
+ <a href="#-autor">Autor</a> -->
 </p>
 
 
@@ -33,7 +33,7 @@
 
 - [x] Companhias
 - [x] Demonstrativos
-- [ ] Fazer download dos dados
+- [x] Fazer download dos dados
 
 ### Pré-requisitos
 
@@ -68,14 +68,17 @@ yarn dev
  - [@fortawesome/react-fontawesome]
  - [axios]
  - [bulma]
+ - [json2csv]
  - [mongodb]
  - [next]
  - [react]
  - [react-bulma-components]
+ - [react-csv]
  - [react-dom]
  - [react-input-mask]
  - [react-promise-tracker]
  - [sass]
+ - [uuid]
 
 
 ### ⚙️ Instalando dependências
